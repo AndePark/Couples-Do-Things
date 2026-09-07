@@ -1,46 +1,40 @@
 # Couples Do Things
 
-A native iOS app (iOS 17+) where a couple shares one list of things to do together. Optional address, price, and dates. Home-screen widgets with a photo you pick on your own iPhone.
+A native iOS app (iOS 17+) where you and your partner share one list of things to do together. Optional address, price, and dates. Built to run **for free** on two iPhones with Xcode — no Apple Developer Program ($99) and no App Store.
 
 ## What you get
 
-- Sign in with Apple
+- Email + password accounts (Firebase free plan)
 - Create a couple space or join with a 6-character invite code
 - Add / edit items (title required; address, price, and a date or date range optional)
 - Mark done → **Memories**, or delete without completing
-- Small, medium, and large widgets: upcoming + recently added, tap opens the item
+- Home-screen widgets (small / medium / large) if your Mac/Xcode will sign them; the in-app list works either way
 - Widget background photo is **per device**
 
-## Open the project (Mac)
+## Install on your two iPhones (free)
 
-This project is generated with [XcodeGen](https://github.com/yonaskolb/XcodeGen). On a Mac:
+You need a Mac with Xcode and a free Apple ID (the same one you use for the App Store is fine). You do **not** enroll in the paid Apple Developer Program.
 
-```bash
-brew install xcodegen
-cd "path/to/Couples Do Things"
-xcodegen generate
-open CouplesDoThings.xcodeproj
-```
+1. On a Mac: install Xcode from the Mac App Store (free).
+2. Open `CouplesDoThings.xcodeproj` (or run `xcodegen generate` first if you prefer regenerating the project from `project.yml`).
+3. Signing: select the **CouplesDoThings** target → Signing & Capabilities → Team → **Add an Account…** with your free Apple ID → choose **Personal Team**. Do the same for **CouplesDoThingsWidget** if that target is enabled.
+4. Plug in your iPhone, unlock it, tap Trust This Computer. In Xcode’s device menu, pick that iPhone. You may need Settings → Privacy & Security → Developer Mode **On**.
+5. Press Run. The first time, on the phone go to Settings → General → VPN & Device Management and trust your developer certificate.
+6. Repeat on your girlfriend’s iPhone (same Mac, same Xcode project, plug her phone in and Run).
 
-Select your Apple Developer **Team** on both the app and widget targets.
+**Catch:** free “Personal Team” installs expire about **every 7 days**. Open Xcode, plug the phone in, and Run again to refresh. That is the tradeoff for not paying Apple.
 
-Bundle IDs:
+If Xcode errors on **App Groups** (common on a free team), the shared list in the app still works. Remove the widget target from the scheme or ignore the widget; you can add widgets later if you ever enroll.
 
-- App: `com.couplesdothings.app`
-- Widget: `com.couplesdothings.app.widget`
-- App Group: `group.com.couplesdothings.app`
-- URL scheme: `couplesdothings://`
+## Firebase (also free)
 
-In the Apple Developer portal, register those App IDs, enable **Sign In with Apple** and **App Groups**, and attach `group.com.couplesdothings.app` to both IDs.
-
-## Firebase
+Use the Spark (no-cost) plan.
 
 1. Create a Firebase project.
-2. Add an iOS app with bundle ID `com.couplesdothings.app`.
+2. Add an iOS app. Bundle ID starts as `com.couplesdothings.app` — if Xcode changes it to include your personal team prefix, use **that** exact ID in Firebase.
 3. Download `GoogleService-Info.plist` and replace `CouplesDoThings/GoogleService-Info.plist`.
-4. Authentication → Sign-in method → enable **Apple**.
-5. Create a Firestore database (production mode is fine once rules are deployed).
-6. Deploy rules:
+4. Authentication → Sign-in method → enable **Email/Password**.
+5. Create a Firestore database, then deploy rules:
 
 ```bash
 firebase deploy --only firestore:rules
@@ -48,20 +42,12 @@ firebase deploy --only firestore:rules
 
 The placeholder plist will not talk to a real project until you replace it.
 
-### Sign in with Apple + Firebase
+## How the two of you use it
 
-In the Firebase console Apple provider settings, add your app’s Services ID / Team ID / key as documented by Firebase. For a single iOS app, the bundle ID is usually enough once the capability is on the App ID.
-
-## Run and verify
-
-- Sign in with Apple works most reliably on a **physical iPhone**.
-- Create a couple, copy the invite code, join from the second Apple ID.
-- Add an at-home item (title only) and an outing (address, price, dates).
-- Complete one item (Memories) and delete another.
-- Settings → choose a widget photo.
-- On the Home Screen, add the **Couples Do Things** widget (small / medium / large) and tap an item.
-
-This Windows workspace cannot compile or run the iOS app. Use Xcode on a Mac.
+1. Each of you creates an account in the app (name, email, password).
+2. One person taps **Create couple space** and copies the invite code.
+3. The other joins with that code.
+4. Add movies, dinners, trips — extra fields are optional.
 
 ## Layout
 
@@ -70,3 +56,5 @@ This Windows workspace cannot compile or run the iOS app. Use Xcode on a Mac.
 - `Shared/` — App Group snapshot, deep links
 - `firestore.rules` — member-only couple data
 - `project.yml` — XcodeGen spec
+
+This Windows folder cannot compile iOS. Use Xcode on a Mac.
