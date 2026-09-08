@@ -27,6 +27,7 @@
 		AA0000010000000000000012 /* WidgetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000012 /* WidgetSnapshot.swift */; };
 		AA0000010000000000000013 /* WidgetDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000013 /* WidgetDataStore.swift */; };
 		AA0000010000000000000014 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000014 /* Assets.xcassets */; };
+		AA0000010000000000000015 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000015 /* GoogleService-Info.plist */; };
 		AA0000010000000000000016 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = PK0000010000000000000001 /* FirebaseAuth */; };
 		AA0000010000000000000017 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = PK0000010000000000000002 /* FirebaseFirestore */; };
 		AA0000010000000000000018 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = PK0000010000000000000003 /* FirebaseCore */; };
@@ -437,6 +438,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CouplesDoThings/CouplesDoThings.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q8CNXLJQAQ;
@@ -455,6 +457,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.couplesdothings.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -468,6 +471,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CouplesDoThings/CouplesDoThings.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q8CNXLJQAQ;
@@ -486,6 +490,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.couplesdothings.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -498,6 +503,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = CouplesDoThingsWidget/CouplesDoThingsWidget.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q8CNXLJQAQ;
@@ -513,6 +519,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.couplesdothings.app.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -525,6 +532,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = CouplesDoThingsWidget/CouplesDoThingsWidget.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q8CNXLJQAQ;
@@ -540,6 +548,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.couplesdothings.app.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -17,6 +17,10 @@ enum WidgetDataStore {
         containerURL?.appendingPathComponent(AppConstants.backgroundImageFileName)
     }
 
+    private static var personalBackgroundURL: URL? {
+        containerURL?.appendingPathComponent(AppConstants.personalBackgroundImageFileName)
+    }
+
     static func loadSnapshot() -> WidgetSnapshot {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
@@ -60,6 +64,21 @@ enum WidgetDataStore {
             try? data.write(to: backgroundURL, options: .atomic)
         } else {
             try? FileManager.default.removeItem(at: backgroundURL)
+        }
+    }
+
+    static func loadPersonalBackgroundImageData() -> Data? {
+        guard let personalBackgroundURL else { return nil }
+        return try? Data(contentsOf: personalBackgroundURL)
+    }
+
+    static func savePersonalBackgroundImageData(_ data: Data?) {
+        guard let personalBackgroundURL else { return }
+        prepareContainer()
+        if let data {
+            try? data.write(to: personalBackgroundURL, options: .atomic)
+        } else {
+            try? FileManager.default.removeItem(at: personalBackgroundURL)
         }
     }
 
