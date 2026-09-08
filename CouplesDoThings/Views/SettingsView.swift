@@ -79,8 +79,13 @@ struct SettingsView: View {
 
     private func savePhoto(_ item: PhotosPickerItem?) async {
         guard let item else { return }
-        let data = (try? await item.loadTransferable(type: PickedImageData.self))?.data
-            ?? (try? await item.loadTransferable(type: Data.self))
+        var data: Data?
+        if let picked = try? await item.loadTransferable(type: PickedImageData.self) {
+            data = picked.data
+        }
+        if data == nil {
+            data = try? await item.loadTransferable(type: Data.self)
+        }
         guard let data, let jpeg = Self.jpegData(from: data) else { return }
         WidgetDataStore.saveBackgroundImageData(jpeg)
         await MainActor.run {
