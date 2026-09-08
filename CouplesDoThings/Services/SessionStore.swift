@@ -20,6 +20,11 @@ final class SessionStore: ObservableObject {
 
     var uid: String? { Auth.auth().currentUser?.uid }
 
+    var isSharingPhoto: Bool {
+        guard let uid, let couple else { return false }
+        return couple.sharedPhotoParticipantIds.contains(uid)
+    }
+
     var activeItems: [CoupleItem] {
         items.filter { !$0.isCompleted }
     }
@@ -136,6 +141,22 @@ final class SessionStore: ObservableObject {
         refreshWidget()
     }
 
+    func setPhotoSharing(enabled: Bool) async {
+        guard let uid, let couple else { return }
+        let personalData = WidgetDataStore.loadPersonalBackgroundImageData()
+        do {
+            try await coupleService.setPhotoSharing(
+                uid: uid,
+                coupleId: couple.id,
+                enabled: enabled,
+                photoData: enabled ? personalData : nil
+            )
+            errorMessage = nil
+        } catch {
+            errorMessage = error.localizedDescription
+        }
+    }
+
     private func listen(uid: String) {
         profileListener?.remove()
         profileListener = coupleService.listenProfile(uid: uid) { [weak self] profile in
@@ -171,6 +192,7 @@ final class SessionStore: ObservableObject {
                 } else {
                     self.partnerName = nil
                 }
+                self.syncEffectiveWidgetPhoto()
             }
         }
 
@@ -180,6 +202,18 @@ final class SessionStore: ObservableObject {
                 self?.refreshWidget()
             }
         }
+    }
+
+    private func syncEffectiveWidgetPhoto() {
+        guard let couple else { return }
+        if couple.isPhotoSharedByBoth,
+           let base64 = couple.sharedPhotoData,
+           let data = Data(base64Encoded: base64) {
+            WidgetDataStore.saveBackgroundImageData(data)
+        } else {
+            WidgetDataStore.saveBackgroundImageData(WidgetDataStore.loadPersonalBackgroundImageData())
+        }
+        refreshWidget()
     }
 
     private func refreshWidget() {

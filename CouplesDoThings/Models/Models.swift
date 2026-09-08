@@ -40,12 +40,29 @@ struct Couple: Identifiable, Equatable {
     var inviteCode: String
     var memberIds: [String]
     var createdAt: Date
+    var sharedPhotoParticipantIds: [String]
+    var sharedPhotoData: String?
+    var sharedPhotoUpdatedBy: String?
+    var sharedPhotoUpdatedAt: Date?
 
-    init(id: String, inviteCode: String, memberIds: [String], createdAt: Date = .now) {
+    init(
+        id: String,
+        inviteCode: String,
+        memberIds: [String],
+        createdAt: Date = .now,
+        sharedPhotoParticipantIds: [String] = [],
+        sharedPhotoData: String? = nil,
+        sharedPhotoUpdatedBy: String? = nil,
+        sharedPhotoUpdatedAt: Date? = nil
+    ) {
         self.id = id
         self.inviteCode = inviteCode
         self.memberIds = memberIds
         self.createdAt = createdAt
+        self.sharedPhotoParticipantIds = sharedPhotoParticipantIds
+        self.sharedPhotoData = sharedPhotoData
+        self.sharedPhotoUpdatedBy = sharedPhotoUpdatedBy
+        self.sharedPhotoUpdatedAt = sharedPhotoUpdatedAt
     }
 
     init?(id: String, data: [String: Any]) {
@@ -54,14 +71,23 @@ struct Couple: Identifiable, Equatable {
         self.inviteCode = inviteCode
         self.memberIds = data["memberIds"] as? [String] ?? []
         self.createdAt = (data["createdAt"] as? Timestamp)?.dateValue() ?? .now
+        self.sharedPhotoParticipantIds = data["sharedPhotoParticipantIds"] as? [String] ?? []
+        self.sharedPhotoData = data["sharedPhotoData"] as? String
+        self.sharedPhotoUpdatedBy = data["sharedPhotoUpdatedBy"] as? String
+        self.sharedPhotoUpdatedAt = (data["sharedPhotoUpdatedAt"] as? Timestamp)?.dateValue()
     }
 
     var firestoreData: [String: Any] {
         [
             "inviteCode": inviteCode,
             "memberIds": memberIds,
-            "createdAt": Timestamp(date: createdAt)
+            "createdAt": Timestamp(date: createdAt),
+            "sharedPhotoParticipantIds": sharedPhotoParticipantIds
         ]
+    }
+
+    var isPhotoSharedByBoth: Bool {
+        !memberIds.isEmpty && memberIds.allSatisfy { sharedPhotoParticipantIds.contains($0) }
     }
 }
 

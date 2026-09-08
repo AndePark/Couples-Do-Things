@@ -2,9 +2,7 @@ import Foundation
 
 enum WidgetDataStore {
     private static var containerURL: URL? {
-        let url = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: AppConstants.appGroupID)
-        print("🔍 WidgetDataStore containerURL: \(url?.path ?? "NIL — App Group container not accessible")")
-        return url
+        FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: AppConstants.appGroupID)
     }
 
     private static var snapshotURL: URL? {
@@ -13,6 +11,10 @@ enum WidgetDataStore {
 
     private static var backgroundURL: URL? {
         containerURL?.appendingPathComponent(AppConstants.backgroundImageFileName)
+    }
+
+    private static var personalBackgroundURL: URL? {
+        containerURL?.appendingPathComponent(AppConstants.personalBackgroundImageFileName)
     }
 
     static func loadSnapshot() -> WidgetSnapshot {
@@ -37,16 +39,8 @@ enum WidgetDataStore {
     }
 
     static func loadBackgroundImageData() -> Data? {
-        guard let backgroundURL else {
-            print("🔍 loadBackgroundImageData: backgroundURL is NIL")
-            return nil
-        }
-        print("🔍 loadBackgroundImageData: checking path \(backgroundURL.path)")
-        let exists = FileManager.default.fileExists(atPath: backgroundURL.path)
-        print("🔍 loadBackgroundImageData: file exists = \(exists)")
-        let data = try? Data(contentsOf: backgroundURL)
-        print("🔍 loadBackgroundImageData: data bytes = \(data?.count ?? -1)")
-        return data
+        guard let backgroundURL else { return nil }
+        return try? Data(contentsOf: backgroundURL)
     }
 
     static func backgroundImageRevision() -> Int {
@@ -60,20 +54,27 @@ enum WidgetDataStore {
     }
 
     static func saveBackgroundImageData(_ data: Data?) {
-        guard let backgroundURL else {
-            print("🔍 saveBackgroundImageData: backgroundURL is NIL — cannot save")
-            return
-        }
+        guard let backgroundURL else { return }
         prepareContainer()
         if let data {
-            do {
-                try data.write(to: backgroundURL, options: .atomic)
-                print("🔍 saveBackgroundImageData: wrote \(data.count) bytes to \(backgroundURL.path)")
-            } catch {
-                print("🔍 saveBackgroundImageData: WRITE FAILED: \(error)")
-            }
+            try? data.write(to: backgroundURL, options: .atomic)
         } else {
             try? FileManager.default.removeItem(at: backgroundURL)
+        }
+    }
+
+    static func loadPersonalBackgroundImageData() -> Data? {
+        guard let personalBackgroundURL else { return nil }
+        return try? Data(contentsOf: personalBackgroundURL)
+    }
+
+    static func savePersonalBackgroundImageData(_ data: Data?) {
+        guard let personalBackgroundURL else { return }
+        prepareContainer()
+        if let data {
+            try? data.write(to: personalBackgroundURL, options: .atomic)
+        } else {
+            try? FileManager.default.removeItem(at: personalBackgroundURL)
         }
     }
 

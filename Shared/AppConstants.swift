@@ -5,4 +5,5 @@ enum AppConstants {
     static let urlScheme = "couplesdothings"
     static let snapshotFileName = "widget-snapshot.json"
     static let backgroundImageFileName = "widget-background.jpg"
+    static let personalBackgroundImageFileName = "widget-background-personal.jpg"
 }

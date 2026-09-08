@@ -115,7 +115,13 @@ struct CoupleService {
             batch.deleteDocument(coupleRef)
             batch.deleteDocument(db.collection("inviteCodes").document(couple.inviteCode))
         } else {
-            batch.updateData(["memberIds": remaining], forDocument: coupleRef)
+            batch.updateData(
+                [
+                    "memberIds": remaining,
+                    "sharedPhotoParticipantIds": FieldValue.arrayRemove([uid])
+                ],
+                forDocument: coupleRef
+            )
         }
         try await batch.commit()
     }
@@ -125,6 +131,25 @@ struct CoupleService {
         guard let otherId else { return nil }
         let snap = try? await db.collection("users").document(otherId).getDocument()
         return snap?.data()?["displayName"] as? String
+    }
+
+    func setPhotoSharing(uid: String, coupleId: String, enabled: Bool, photoData: Data?) async throws {
+        let coupleRef = db.collection("couples").document(coupleId)
+        if enabled {
+            var data: [String: Any] = [
+                "sharedPhotoParticipantIds": FieldValue.arrayUnion([uid])
+            ]
+            if let photoData {
+                data["sharedPhotoData"] = photoData.base64EncodedString()
+                data["sharedPhotoUpdatedBy"] = uid
+                data["sharedPhotoUpdatedAt"] = Timestamp(date: .now)
+            }
+            try await coupleRef.updateData(data)
+        } else {
+            try await coupleRef.updateData([
+                "sharedPhotoParticipantIds": FieldValue.arrayRemove([uid])
+            ])
+        }
     }
 
     private func uniqueInviteCode() async throws -> String {
