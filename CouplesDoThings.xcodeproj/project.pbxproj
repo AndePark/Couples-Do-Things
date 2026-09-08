@@ -42,6 +42,9 @@
 		AA0000010000000000000022 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000022 /* WidgetKit.framework */; };
 		AA0000010000000000000023 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000023 /* SwiftUI.framework */; };
 		AA0000010000000000000024 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000024 /* AuthenticationServices.framework */; };
+		AA0000010000000000000028 /* GoogleMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000028 /* GoogleMaps.swift */; };
+		AA0000010000000000000029 /* AddressMapPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000029 /* AddressMapPreview.swift */; };
+		DA3146B0304FFB02006A03F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA3146AF304FFB02006A03F8 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,7 +92,6 @@
 		AB0000010000000000000012 /* WidgetSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSnapshot.swift; sourceTree = "<group>"; };
 		AB0000010000000000000013 /* WidgetDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetDataStore.swift; sourceTree = "<group>"; };
 		AB0000010000000000000014 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AB0000010000000000000015 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AB0000010000000000000016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB0000010000000000000017 /* CouplesDoThings.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CouplesDoThings.entitlements; sourceTree = "<group>"; };
 		AB000001000000000000001A /* CouplesDoThingsWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouplesDoThingsWidget.swift; sourceTree = "<group>"; };
@@ -102,6 +104,9 @@
 		AB0000010000000000000025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB0000010000000000000026 /* CouplesDoThingsWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CouplesDoThingsWidget.entitlements; sourceTree = "<group>"; };
 		AB0000010000000000000027 /* CouplesDoThings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CouplesDoThings.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB0000010000000000000028 /* GoogleMaps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMaps.swift; sourceTree = "<group>"; };
+		AB0000010000000000000029 /* AddressMapPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressMapPreview.swift; sourceTree = "<group>"; };
+		DA3146AF304FFB02006A03F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,8 +153,8 @@
 				GR0000010000000000000008 /* Services */,
 				GR0000010000000000000009 /* Views */,
 				AB0000010000000000000014 /* Assets.xcassets */,
-				AB0000010000000000000015 /* GoogleService-Info.plist */,
 				AB0000010000000000000016 /* Info.plist */,
+				DA3146AF304FFB02006A03F8 /* GoogleService-Info.plist */,
 				AB0000010000000000000017 /* CouplesDoThings.entitlements */,
 			);
 			path = CouplesDoThings;
@@ -212,6 +217,7 @@
 				AB0000010000000000000005 /* CoupleService.swift */,
 				AB0000010000000000000006 /* ItemService.swift */,
 				AB0000010000000000000007 /* SessionStore.swift */,
+				AB0000010000000000000028 /* GoogleMaps.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -225,6 +231,7 @@
 				AB000001000000000000000B /* MainTabView.swift */,
 				AB000001000000000000000C /* ItemListView.swift */,
 				AB000001000000000000000D /* ItemEditorView.swift */,
+				AB0000010000000000000029 /* AddressMapPreview.swift */,
 				AB000001000000000000000E /* MemoriesView.swift */,
 				AB000001000000000000000F /* SettingsView.swift */,
 			);
@@ -321,7 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA0000010000000000000014 /* Assets.xcassets in Resources */,
-				AA0000010000000000000015 /* GoogleService-Info.plist in Resources */,
+				DA3146B0304FFB02006A03F8 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +366,8 @@
 				AA0000010000000000000011 /* DeepLink.swift in Sources */,
 				AA0000010000000000000012 /* WidgetSnapshot.swift in Sources */,
 				AA0000010000000000000013 /* WidgetDataStore.swift in Sources */,
+				AA0000010000000000000028 /* GoogleMaps.swift in Sources */,
+				AA0000010000000000000029 /* AddressMapPreview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

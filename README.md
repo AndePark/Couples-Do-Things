@@ -24,7 +24,7 @@ You need a Mac with Xcode and a free Apple ID (the same one you use for the App 
 
 **Catch:** free “Personal Team” installs expire about **every 7 days**. Open Xcode, plug the phone in, and Run again to refresh. That is the tradeoff for not paying Apple.
 
-If Xcode errors on **App Groups** (common on a free team), the shared list in the app still works. Remove the widget target from the scheme or ignore the widget; you can add widgets later if you ever enroll.
+The project is set up for a **free Personal Team** (no App Groups capability). The couple list in the app still works. Home-screen widgets may stay empty because a free Apple ID cannot share data between the app and the widget. You do not need a paid developer account.
 
 ## Firebase (also free)
 

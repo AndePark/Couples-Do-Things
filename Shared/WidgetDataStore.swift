@@ -2,7 +2,11 @@ import Foundation
 
 enum WidgetDataStore {
     private static var containerURL: URL? {
-        FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: AppConstants.appGroupID)
+        if let group = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: AppConstants.appGroupID) {
+            return group
+        }
+        return FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first?
+            .appendingPathComponent("CouplesDoThings", isDirectory: true)
     }
 
     private static var snapshotURL: URL? {

@@ -15,6 +15,14 @@ struct MemoriesView: View {
                 } else {
                     List(session.memories) { item in
                         ItemRowView(item: item)
+                            .contextMenu {
+                                if let address = item.address, !address.isEmpty {
+                                    Button("Open in Google Maps") { GoogleMaps.open(address: address) }
+                                }
+                                Button("Delete", role: .destructive) {
+                                    Task { await session.delete(item: item) }
+                                }
+                            }
                             .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                                 Button("Delete", role: .destructive) {
                                     Task { await session.delete(item: item) }
