@@ -77,6 +77,9 @@ struct ItemListView: View {
             }
             .contextMenu {
                 Button("Edit") { editorItem = item }
+                if let address = item.address, !address.isEmpty {
+                    Button("Open in Google Maps") { GoogleMaps.open(address: address) }
+                }
                 Button("Mark done") { Task { await session.complete(item: item) } }
                 Button("Delete", role: .destructive) { Task { await session.delete(item: item) } }
             }
@@ -102,9 +105,14 @@ struct ItemRowView: View {
             .font(.caption)
             .foregroundStyle(AppTheme.muted)
             if let address = item.address, !address.isEmpty {
-                Text(address)
+                Label(address, systemImage: "mappin.and.ellipse")
                     .font(.caption)
-                    .foregroundStyle(AppTheme.muted)
+                    .foregroundStyle(Color.accentColor)
+                    .highPriorityGesture(
+                        TapGesture().onEnded {
+                            GoogleMaps.open(address: address)
+                        }
+                    )
             }
         }
         .padding(.vertical, 4)

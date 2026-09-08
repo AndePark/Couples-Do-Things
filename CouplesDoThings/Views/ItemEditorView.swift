@@ -1,5 +1,4 @@
 import SwiftUI
-import UIKit
 
 struct ItemEditorView: View {
     @EnvironmentObject private var session: SessionStore
@@ -34,9 +33,10 @@ struct ItemEditorView: View {
                     }
                 }
                 if let address = sanitizedAddress {
-                    Section {
-                        Button("Open in Maps") {
-                            openMaps(address: address)
+                    Section("Map") {
+                        AddressMapPreview(address: address)
+                        Button("Open in Google Maps") {
+                            GoogleMaps.open(address: address)
                         }
                     }
                 }
@@ -94,13 +94,5 @@ struct ItemEditorView: View {
         }
         await session.save(item: next)
         dismiss()
-    }
-
-    private func openMaps(address: String) {
-        var components = URLComponents(string: "http://maps.apple.com/")
-        components?.queryItems = [URLQueryItem(name: "q", value: address)]
-        if let url = components?.url {
-            UIApplication.shared.open(url)
-        }
     }
 }

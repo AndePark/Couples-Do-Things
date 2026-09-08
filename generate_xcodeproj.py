@@ -50,6 +50,8 @@ pbx = r"""// !$*UTF8*$!
 		AA0000010000000000000022 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000022; };
 		AA0000010000000000000023 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000023; };
 		AA0000010000000000000024 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000024; };
+		AA0000010000000000000028 /* GoogleMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000028; };
+		AA0000010000000000000029 /* AddressMapPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000029; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +112,8 @@ pbx = r"""// !$*UTF8*$!
 		AB0000010000000000000025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB0000010000000000000026 /* CouplesDoThingsWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CouplesDoThingsWidget.entitlements; sourceTree = "<group>"; };
 		AB0000010000000000000027 /* CouplesDoThings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CouplesDoThings.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB0000010000000000000028 /* GoogleMaps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMaps.swift; sourceTree = "<group>"; };
+		AB0000010000000000000029 /* AddressMapPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressMapPreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,7 +224,8 @@ pbx = r"""// !$*UTF8*$!
 				AB0000010000000000000005 /* CoupleService.swift */,
 				AB0000010000000000000006 /* ItemService.swift */,
 				AB0000010000000000000007 /* SessionStore.swift */,
- mar			);
+				AB0000010000000000000028 /* GoogleMaps.swift */,
+			);
 			path = Services;
 			sourceTree = "<group>";
 		};
@@ -233,6 +238,7 @@ pbx = r"""// !$*UTF8*$!
 				AB000001000000000000000B /* MainTabView.swift */,
 				AB000001000000000000000C /* ItemListView.swift */,
 				AB000001000000000000000D /* ItemEditorView.swift */,
+				AB0000010000000000000029 /* AddressMapPreview.swift */,
 				AB000001000000000000000E /* MemoriesView.swift */,
 				AB000001000000000000000F /* SettingsView.swift */,
 			);
@@ -367,6 +373,8 @@ pbx = r"""// !$*UTF8*$!
 				AA0000010000000000000011 /* DeepLink.swift in Sources */,
 				AA0000010000000000000012 /* WidgetSnapshot.swift in Sources */,
 				AA0000010000000000000013 /* WidgetDataStore.swift in Sources */,
+				AA0000010000000000000028 /* GoogleMaps.swift in Sources */,
+				AA0000010000000000000029 /* AddressMapPreview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
