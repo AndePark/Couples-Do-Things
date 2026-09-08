@@ -96,7 +96,7 @@ struct SettingsView: View {
         }
     }
 
-    private static func jpegData(from data: Data, maxDimension: CGFloat = 800) -> Data? {
+    private static func jpegData(from data: Data, maxDimension: CGFloat = 400) -> Data? {
         guard let image = UIImage(data: data) else { return nil }
         let longest = max(image.size.width, image.size.height)
         let scale = longest > maxDimension ? maxDimension / longest : 1
@@ -105,7 +105,7 @@ struct SettingsView: View {
         let rendered = renderer.image { _ in
             image.draw(in: CGRect(origin: .zero, size: size))
         }
-        return rendered.jpegData(compressionQuality: 0.72)
+        return rendered.jpegData(compressionQuality: 0.6)
     }
 }
 

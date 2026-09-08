@@ -68,11 +68,20 @@ struct WidgetBackground: View {
                 Color(red: 0.35, green: 0.18, blue: 0.20)
                 if let imageData = WidgetDataStore.loadBackgroundImageData(),
                    let image = UIImage(data: imageData) {
-                    Image(uiImage: image)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: geo.size.width, height: geo.size.height)
-                        .clipped()
+                    if #available(iOSApplicationExtension 18.0, *) {
+                        Image(uiImage: image)
+                            .resizable()
+                            .widgetAccentedRenderingMode(.fullColor)
+                            .scaledToFill()
+                            .frame(width: geo.size.width, height: geo.size.height)
+                            .clipped()
+                    } else {
+                        Image(uiImage: image)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: geo.size.width, height: geo.size.height)
+                            .clipped()
+                    }
                 }
                 Color.black.opacity(0.45)
             }

@@ -2,7 +2,9 @@ import Foundation
 
 enum WidgetDataStore {
     private static var containerURL: URL? {
-        FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: AppConstants.appGroupID)
+        let url = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: AppConstants.appGroupID)
+        print("🔍 WidgetDataStore containerURL: \(url?.path ?? "NIL — App Group container not accessible")")
+        return url
     }
 
     private static var snapshotURL: URL? {
@@ -35,8 +37,16 @@ enum WidgetDataStore {
     }
 
     static func loadBackgroundImageData() -> Data? {
-        guard let backgroundURL else { return nil }
-        return try? Data(contentsOf: backgroundURL)
+        guard let backgroundURL else {
+            print("🔍 loadBackgroundImageData: backgroundURL is NIL")
+            return nil
+        }
+        print("🔍 loadBackgroundImageData: checking path \(backgroundURL.path)")
+        let exists = FileManager.default.fileExists(atPath: backgroundURL.path)
+        print("🔍 loadBackgroundImageData: file exists = \(exists)")
+        let data = try? Data(contentsOf: backgroundURL)
+        print("🔍 loadBackgroundImageData: data bytes = \(data?.count ?? -1)")
+        return data
     }
 
     static func backgroundImageRevision() -> Int {
@@ -50,10 +60,18 @@ enum WidgetDataStore {
     }
 
     static func saveBackgroundImageData(_ data: Data?) {
-        guard let backgroundURL else { return }
+        guard let backgroundURL else {
+            print("🔍 saveBackgroundImageData: backgroundURL is NIL — cannot save")
+            return
+        }
         prepareContainer()
         if let data {
-            try? data.write(to: backgroundURL, options: .atomic)
+            do {
+                try data.write(to: backgroundURL, options: .atomic)
+                print("🔍 saveBackgroundImageData: wrote \(data.count) bytes to \(backgroundURL.path)")
+            } catch {
+                print("🔍 saveBackgroundImageData: WRITE FAILED: \(error)")
+            }
         } else {
             try? FileManager.default.removeItem(at: backgroundURL)
         }
