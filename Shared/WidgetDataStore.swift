@@ -27,6 +27,7 @@ enum WidgetDataStore {
 
     static func saveSnapshot(_ snapshot: WidgetSnapshot) {
         guard let snapshotURL else { return }
+        prepareContainer()
         let encoder = JSONEncoder()
         encoder.dateEncodingStrategy = .iso8601
         guard let data = try? encoder.encode(snapshot) else { return }
@@ -38,12 +39,28 @@ enum WidgetDataStore {
         return try? Data(contentsOf: backgroundURL)
     }
 
+    static func backgroundImageRevision() -> Int {
+        guard let backgroundURL,
+              let values = try? backgroundURL.resourceValues(forKeys: [.contentModificationDateKey, .fileSizeKey])
+        else {
+            return 0
+        }
+        let stamp = Int((values.contentModificationDate ?? .distantPast).timeIntervalSince1970)
+        return stamp ^ (values.fileSize ?? 0)
+    }
+
     static func saveBackgroundImageData(_ data: Data?) {
         guard let backgroundURL else { return }
+        prepareContainer()
         if let data {
             try? data.write(to: backgroundURL, options: .atomic)
         } else {
             try? FileManager.default.removeItem(at: backgroundURL)
         }
+    }
+
+    private static func prepareContainer() {
+        guard let containerURL else { return }
+        try? FileManager.default.createDirectory(at: containerURL, withIntermediateDirectories: true)
     }
 }

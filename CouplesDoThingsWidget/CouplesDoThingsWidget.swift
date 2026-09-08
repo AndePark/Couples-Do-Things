@@ -5,12 +5,12 @@ import WidgetKit
 struct CouplesWidgetEntry: TimelineEntry {
     let date: Date
     let snapshot: WidgetSnapshot
-    let imageData: Data?
+    let imageRevision: Int
 }
 
 struct CouplesWidgetProvider: TimelineProvider {
     func placeholder(in context: Context) -> CouplesWidgetEntry {
-        CouplesWidgetEntry(date: .now, snapshot: .empty, imageData: WidgetDataStore.loadBackgroundImageData())
+        CouplesWidgetEntry(date: .now, snapshot: .empty, imageRevision: WidgetDataStore.backgroundImageRevision())
     }
 
     func getSnapshot(in context: Context, completion: @escaping (CouplesWidgetEntry) -> Void) {
@@ -18,7 +18,7 @@ struct CouplesWidgetProvider: TimelineProvider {
             CouplesWidgetEntry(
                 date: .now,
                 snapshot: WidgetDataStore.loadSnapshot(),
-                imageData: WidgetDataStore.loadBackgroundImageData()
+                imageRevision: WidgetDataStore.backgroundImageRevision()
             )
         )
     }
@@ -27,7 +27,7 @@ struct CouplesWidgetProvider: TimelineProvider {
         let entry = CouplesWidgetEntry(
             date: .now,
             snapshot: WidgetDataStore.loadSnapshot(),
-            imageData: WidgetDataStore.loadBackgroundImageData()
+            imageRevision: WidgetDataStore.backgroundImageRevision()
         )
         let next = Calendar.current.date(byAdding: .hour, value: 1, to: .now) ?? .now.addingTimeInterval(3600)
         completion(Timeline(entries: [entry], policy: .after(next)))
@@ -38,9 +38,7 @@ struct CouplesDoThingsWidget: Widget {
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: "CouplesDoThingsWidget", provider: CouplesWidgetProvider()) { entry in
             CouplesWidgetView(entry: entry)
-                .containerBackground(for: .widget) {
-                    WidgetBackground(imageData: entry.imageData)
-                }
+                .widgetBackground(revision: entry.imageRevision)
         }
         .configurationDisplayName("Couples Do Things")
         .description("Upcoming dates and recently added ideas.")
@@ -48,19 +46,39 @@ struct CouplesDoThingsWidget: Widget {
     }
 }
 
+extension View {
+    @ViewBuilder
+    func widgetBackground(revision: Int) -> some View {
+        if #available(iOSApplicationExtension 17.0, *) {
+            containerBackground(for: .widget) {
+                WidgetBackground(revision: revision)
+            }
+        } else {
+            background(WidgetBackground(revision: revision))
+        }
+    }
+}
+
 struct WidgetBackground: View {
-    let imageData: Data?
+    let revision: Int
 
     var body: some View {
-        ZStack {
-            Color(red: 0.35, green: 0.18, blue: 0.20)
-            if let imageData, let image = UIImage(data: imageData) {
-                Image(uiImage: image)
-                    .resizable()
-                    .scaledToFill()
+        GeometryReader { geo in
+            ZStack {
+                Color(red: 0.35, green: 0.18, blue: 0.20)
+                if let imageData = WidgetDataStore.loadBackgroundImageData(),
+                   let image = UIImage(data: imageData) {
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: geo.size.width, height: geo.size.height)
+                        .clipped()
+                }
+                Color.black.opacity(0.45)
             }
-            Color.black.opacity(0.45)
+            .frame(width: geo.size.width, height: geo.size.height)
         }
+        .id(revision)
     }
 }
 

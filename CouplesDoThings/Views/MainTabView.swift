@@ -19,7 +19,7 @@ struct MainTabView: View {
                 .tabItem { Label("Settings", systemImage: "gearshape") }
                 .tag(2)
         }
-        .onChange(of: deepLink) { _, link in
+        .onChange(of: deepLink) { link in
             guard let link else { return }
             switch link {
             case .list:

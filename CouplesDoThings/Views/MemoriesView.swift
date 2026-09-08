@@ -7,10 +7,10 @@ struct MemoriesView: View {
         NavigationStack {
             Group {
                 if session.memories.isEmpty {
-                    ContentUnavailableView(
-                        "No memories yet",
+                    AppEmptyState(
+                        title: "No memories yet",
                         systemImage: "sparkles",
-                        description: Text("Completed things will land here.")
+                        message: "Completed things will land here."
                     )
                 } else {
                     List(session.memories) { item in

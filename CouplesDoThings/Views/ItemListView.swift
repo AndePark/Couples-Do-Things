@@ -10,10 +10,10 @@ struct ItemListView: View {
         NavigationStack {
             Group {
                 if session.activeItems.isEmpty {
-                    ContentUnavailableView(
-                        "Nothing on the list yet",
+                    AppEmptyState(
+                        title: "Nothing on the list yet",
                         systemImage: "heart",
-                        description: Text("Add a movie night, a dinner, or a weekend trip.")
+                        message: "Add a movie night, a dinner, or a weekend trip."
                     )
                 } else {
                     List {
@@ -52,7 +52,7 @@ struct ItemListView: View {
             .sheet(item: $editorItem) { item in
                 ItemEditorView(item: item)
             }
-            .onChange(of: highlightedItemID) { _, id in
+            .onChange(of: highlightedItemID) { id in
                 if let id, let match = session.items.first(where: { $0.id == id && !$0.isCompleted }) {
                     editorItem = match
                     highlightedItemID = nil

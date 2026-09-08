@@ -1,6 +1,8 @@
+import CoreTransferable
 import PhotosUI
 import SwiftUI
 import UIKit
+import UniformTypeIdentifiers
 import WidgetKit
 
 struct SettingsView: View {
@@ -69,7 +71,7 @@ struct SettingsView: View {
                     Task { await session.leaveCouple() }
                 }
             }
-            .onChange(of: photoItem) { _, item in
+            .onChange(of: photoItem) { item in
                 Task { await savePhoto(item) }
             }
         }
@@ -77,15 +79,18 @@ struct SettingsView: View {
 
     private func savePhoto(_ item: PhotosPickerItem?) async {
         guard let item else { return }
-        guard let data = try? await item.loadTransferable(type: Data.self) else { return }
-        let resized = Self.jpegData(from: data) ?? data
-        WidgetDataStore.saveBackgroundImageData(resized)
-        hasWidgetPhoto = true
-        session.refreshWidgetPhoto()
+        let data = (try? await item.loadTransferable(type: PickedImageData.self))?.data
+            ?? (try? await item.loadTransferable(type: Data.self))
+        guard let data, let jpeg = Self.jpegData(from: data) else { return }
+        WidgetDataStore.saveBackgroundImageData(jpeg)
+        await MainActor.run {
+            hasWidgetPhoto = WidgetDataStore.loadBackgroundImageData() != nil
+            session.refreshWidgetPhoto()
+        }
     }
 
-    private static func jpegData(from data: Data, maxDimension: CGFloat = 1200) -> Data? {
-        guard let image = UIImage(data: data) else { return data }
+    private static func jpegData(from data: Data, maxDimension: CGFloat = 800) -> Data? {
+        guard let image = UIImage(data: data) else { return nil }
         let longest = max(image.size.width, image.size.height)
         let scale = longest > maxDimension ? maxDimension / longest : 1
         let size = CGSize(width: image.size.width * scale, height: image.size.height * scale)
@@ -93,6 +98,25 @@ struct SettingsView: View {
         let rendered = renderer.image { _ in
             image.draw(in: CGRect(origin: .zero, size: size))
         }
-        return rendered.jpegData(compressionQuality: 0.8)
+        return rendered.jpegData(compressionQuality: 0.72)
+    }
+}
+
+private struct PickedImageData: Transferable {
+    let data: Data
+
+    static var transferRepresentation: some TransferRepresentation {
+        DataRepresentation(importedContentType: .image) { data in
+            PickedImageData(data: data)
+        }
+        DataRepresentation(importedContentType: .jpeg) { data in
+            PickedImageData(data: data)
+        }
+        DataRepresentation(importedContentType: .png) { data in
+            PickedImageData(data: data)
+        }
+        DataRepresentation(importedContentType: .heic) { data in
+            PickedImageData(data: data)
+        }
     }
 }

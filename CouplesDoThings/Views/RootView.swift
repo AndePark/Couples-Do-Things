@@ -24,7 +24,7 @@ struct RootView: View {
                 session.start(uid: user.uid, displayName: auth.suggestedDisplayName)
             }
         }
-        .onChange(of: auth.user?.uid) { _, uid in
+        .onChange(of: auth.user?.uid) { uid in
             if let user = auth.user, let uid {
                 session.start(uid: uid, displayName: auth.suggestedDisplayName)
             } else {
