@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1500"
+   LastUpgradeVersion = "1430"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
-      buildImplicitDependencies = "YES">
+      buildImplicitDependencies = "YES"
+      runPostActionsOnFailure = "NO">
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -14,7 +15,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "TG0000010000000000000001"
+               BlueprintIdentifier = "FAA338240E9F75ED683554F4"
                BuildableName = "CouplesDoThings.app"
                BlueprintName = "CouplesDoThings"
                ReferencedContainer = "container:CouplesDoThings.xcodeproj">
@@ -28,7 +29,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "TG0000010000000000000002"
+               BlueprintIdentifier = "23567E6374E434162F55EAC8"
                BuildableName = "CouplesDoThingsWidget.appex"
                BlueprintName = "CouplesDoThingsWidget"
                ReferencedContainer = "container:CouplesDoThings.xcodeproj">
@@ -41,7 +42,18 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      shouldAutocreateTestPlan = "YES">
+      onlyGenerateCoverageForSpecifiedTargets = "NO">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "FAA338240E9F75ED683554F4"
+            BuildableName = "CouplesDoThings.app"
+            BlueprintName = "CouplesDoThings"
+            ReferencedContainer = "container:CouplesDoThings.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <Testables>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -57,12 +69,14 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "TG0000010000000000000001"
+            BlueprintIdentifier = "FAA338240E9F75ED683554F4"
             BuildableName = "CouplesDoThings.app"
             BlueprintName = "CouplesDoThings"
             ReferencedContainer = "container:CouplesDoThings.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+      </CommandLineArguments>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -74,7 +88,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "TG0000010000000000000001"
+            BlueprintIdentifier = "FAA338240E9F75ED683554F4"
             BuildableName = "CouplesDoThings.app"
             BlueprintName = "CouplesDoThings"
             ReferencedContainer = "container:CouplesDoThings.xcodeproj">

@@ -3,68 +3,65 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA0000010000000000000001 /* CouplesDoThingsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000001 /* CouplesDoThingsApp.swift */; };
-		AA0000010000000000000002 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000002 /* Theme.swift */; };
-		AA0000010000000000000003 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000003 /* Models.swift */; };
-		AA0000010000000000000004 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000004 /* AuthService.swift */; };
-		AA0000010000000000000005 /* CoupleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000005 /* CoupleService.swift */; };
-		AA0000010000000000000006 /* ItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000006 /* ItemService.swift */; };
-		AA0000010000000000000007 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000007 /* SessionStore.swift */; };
-		AA0000010000000000000008 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000008 /* RootView.swift */; };
-		AA0000010000000000000009 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000009 /* SignInView.swift */; };
-		AA000001000000000000000A /* CreateJoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000001000000000000000A /* CreateJoinView.swift */; };
-		AA000001000000000000000B /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000001000000000000000B /* MainTabView.swift */; };
-		AA000001000000000000000C /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000001000000000000000C /* ItemListView.swift */; };
-		AA000001000000000000000D /* ItemEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000001000000000000000D /* ItemEditorView.swift */; };
-		AA000001000000000000000E /* MemoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000001000000000000000E /* MemoriesView.swift */; };
-		AA000001000000000000000F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000001000000000000000F /* SettingsView.swift */; };
-		AA0000010000000000000010 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000010 /* AppConstants.swift */; };
-		AA0000010000000000000011 /* DeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000011 /* DeepLink.swift */; };
-		AA0000010000000000000012 /* WidgetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000012 /* WidgetSnapshot.swift */; };
-		AA0000010000000000000013 /* WidgetDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000013 /* WidgetDataStore.swift */; };
-		AA0000010000000000000014 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000014 /* Assets.xcassets */; };
-		AA0000010000000000000015 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000015 /* GoogleService-Info.plist */; };
-		AA0000010000000000000016 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = PK0000010000000000000001 /* FirebaseAuth */; };
-		AA0000010000000000000017 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = PK0000010000000000000002 /* FirebaseFirestore */; };
-		AA0000010000000000000018 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = PK0000010000000000000003 /* FirebaseCore */; };
-		AA0000010000000000000019 /* CouplesDoThingsWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000020 /* CouplesDoThingsWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		AA000001000000000000001A /* CouplesDoThingsWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000001000000000000001A /* CouplesDoThingsWidget.swift */; };
-		AA000001000000000000001B /* CouplesDoThingsWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000001000000000000001B /* CouplesDoThingsWidgetBundle.swift */; };
-		AA000001000000000000001C /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000010 /* AppConstants.swift */; };
-		AA000001000000000000001D /* DeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000011 /* DeepLink.swift */; };
-		AA000001000000000000001E /* WidgetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000012 /* WidgetSnapshot.swift */; };
-		AA000001000000000000001F /* WidgetDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000013 /* WidgetDataStore.swift */; };
-		AA0000010000000000000021 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000021 /* Assets.xcassets */; };
-		AA0000010000000000000022 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000022 /* WidgetKit.framework */; };
-		AA0000010000000000000023 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000023 /* SwiftUI.framework */; };
-		AA0000010000000000000024 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000024 /* AuthenticationServices.framework */; };
-		AA0000010000000000000028 /* GoogleMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000028 /* GoogleMaps.swift */; };
-		AA0000010000000000000029 /* AddressMapPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000010000000000000029 /* AddressMapPreview.swift */; };
-		DA3146B0304FFB02006A03F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA3146AF304FFB02006A03F8 /* GoogleService-Info.plist */; };
+		0517D6089297A4D038C92FA1 /* CreateJoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1823C97D6C0FAE329570C7 /* CreateJoinView.swift */; };
+		143AF3CABC19844A0B4BF07F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66732F63136ED0D03C87C2A /* Theme.swift */; };
+		1C9331484D30FAF309F6321D /* ItemEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A882DA5F445585D58DAEAB /* ItemEditorView.swift */; };
+		2D143A4DA357032E1BE17F38 /* CouplesDoThingsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1499270453CD52B2EA1A19 /* CouplesDoThingsApp.swift */; };
+		2F0B9E5AB9BA8F8D19BFBD02 /* ItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967ABDD830FA8CB00024595C /* ItemService.swift */; };
+		348EB59D433B87FE68281E56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53DF2F73E9D1FE8244C29149 /* Assets.xcassets */; };
+		3779BBA93893EEFBE4DDE542 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F420B98349C999B0C512A558 /* AppConstants.swift */; };
+		3C3C6F2B6141CF26B46F0169 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93703381A3FE6F742B0D772D /* ItemListView.swift */; };
+		57E8138E7ACC5ED9BE017B96 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B872CF4D0F3D80148961D489 /* FirebaseFirestore */; };
+		5EE5E8288B8C7C90683CD108 /* CouplesDoThingsWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA1D29DEE05D3928A06B411 /* CouplesDoThingsWidget.swift */; };
+		64903416FAD1EF51A526E008 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 405366AEF14C7B2D21E856F5 /* GoogleService-Info.plist */; };
+		66AB8F730072935E142F294D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2969A0C05276077A9BCAAE54 /* Assets.xcassets */; };
+		6CBDCD925CC96123A59D476C /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706760EAC5C2DC2E7D8F0277 /* MainTabView.swift */; };
+		70A91EEC025BCB37C2E3F3D3 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7416A0535B7D76F3665C9D53 /* RootView.swift */; };
+		7183EFAE6A18AA7A8C66C92A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E06C3B209800B3E0945DB69 /* AuthService.swift */; };
+		725AE221E5F428700F55503B /* WidgetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8F3427285DA417C282E5A4 /* WidgetSnapshot.swift */; };
+		8502AD03CC32F24EE2847FEE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = EF70DCADC17C03C85100648F /* FirebaseAuth */; };
+		850D93702EB7086939A65FE8 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8068512E08245AA51644862C /* SignInView.swift */; };
+		8C525BD65567A8853EC25DE6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A5F47E822EC358617CD069 /* SettingsView.swift */; };
+		8DA417129BE92F310BE8ADFD /* WidgetDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7535B22703D8DB4BF2F1FDD9 /* WidgetDataStore.swift */; };
+		8E54BEA982537A9AB74177EC /* CouplesDoThingsWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DABC45126550A4E5D50F98 /* CouplesDoThingsWidgetBundle.swift */; };
+		9BE5B64F82EDC6EE76E7D64C /* MemoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C92D67C2B05A7717734077 /* MemoriesView.swift */; };
+		A257440F5D1401C8569679E5 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = E852A12471EF0666976C35F7 /* Models.swift */; };
+		AA676A918143C9AB8E27377C /* GoogleMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FCD5C2F58A905AEB48ED6B /* GoogleMaps.swift */; };
+		BCE464DD4443B7F3404C1149 /* WidgetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8F3427285DA417C282E5A4 /* WidgetSnapshot.swift */; };
+		C433AC5105355FA1C35B814E /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C256D06B1C09CBBD8B1894E0 /* SessionStore.swift */; };
+		C885F2E276409213DCE715A1 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F420B98349C999B0C512A558 /* AppConstants.swift */; };
+		D3B163CE6B8395C670E31B16 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 2A8EA61AB0E628F943866857 /* FirebaseCore */; };
+		D5FB1D894DAC23B516EDD16E /* AddressMapPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545906801B37064F45E2E8A /* AddressMapPreview.swift */; };
+		DA6B416330543A74005B4DD3 /* GoogleMapsLinkResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6B416230543A74005B4DD3 /* GoogleMapsLinkResolver.swift */; };
+		DAD27924F3CE89EB805C1FF7 /* DeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14EF343C20A70B362927DEC /* DeepLink.swift */; };
+		DAE7CACDBA7AFE03B68826A1 /* DeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14EF343C20A70B362927DEC /* DeepLink.swift */; };
+		DDBB4886340E98789696B16C /* CouplesDoThingsWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 7B483DA4373EC8E7113E6829 /* CouplesDoThingsWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E284752334503D9B114DCF00 /* CoupleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE7B4A57419A819968C4D93 /* CoupleService.swift */; };
+		FB805E4BE443D70CDD3DF2B1 /* WidgetDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7535B22703D8DB4BF2F1FDD9 /* WidgetDataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		PX0000010000000000000001 /* PBXContainerItemProxy */ = {
+		8EA51788A2DBC0CE63A56D57 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = PR0000010000000000000001 /* Project object */;
+			containerPortal = 430C1BD28E4BE33C0B3B2B87 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = TG0000010000000000000002;
+			remoteGlobalIDString = 23567E6374E434162F55EAC8;
 			remoteInfo = CouplesDoThingsWidget;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CP0000010000000000000001 /* Embed Foundation Extensions */ = {
+		F5DEF1D604FB4256F2F80659 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				AA0000010000000000000019 /* CouplesDoThingsWidget.appex in Embed Foundation Extensions */,
+				DDBB4886340E98789696B16C /* CouplesDoThingsWidget.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,343 +69,421 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		AB0000010000000000000001 /* CouplesDoThingsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouplesDoThingsApp.swift; sourceTree = "<group>"; };
-		AB0000010000000000000002 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		AB0000010000000000000003 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		AB0000010000000000000004 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		AB0000010000000000000005 /* CoupleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupleService.swift; sourceTree = "<group>"; };
-		AB0000010000000000000006 /* ItemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemService.swift; sourceTree = "<group>"; };
-		AB0000010000000000000007 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
-		AB0000010000000000000008 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		AB0000010000000000000009 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
-		AB000001000000000000000A /* CreateJoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateJoinView.swift; sourceTree = "<group>"; };
-		AB000001000000000000000B /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
-		AB000001000000000000000C /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
-		AB000001000000000000000D /* ItemEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemEditorView.swift; sourceTree = "<group>"; };
-		AB000001000000000000000E /* MemoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesView.swift; sourceTree = "<group>"; };
-		AB000001000000000000000F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		AB0000010000000000000010 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
-		AB0000010000000000000011 /* DeepLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLink.swift; sourceTree = "<group>"; };
-		AB0000010000000000000012 /* WidgetSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSnapshot.swift; sourceTree = "<group>"; };
-		AB0000010000000000000013 /* WidgetDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetDataStore.swift; sourceTree = "<group>"; };
-		AB0000010000000000000014 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AB0000010000000000000016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB0000010000000000000017 /* CouplesDoThings.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CouplesDoThings.entitlements; sourceTree = "<group>"; };
-		AB000001000000000000001A /* CouplesDoThingsWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouplesDoThingsWidget.swift; sourceTree = "<group>"; };
-		AB000001000000000000001B /* CouplesDoThingsWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouplesDoThingsWidgetBundle.swift; sourceTree = "<group>"; };
-		AB0000010000000000000020 /* CouplesDoThingsWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CouplesDoThingsWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB0000010000000000000021 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AB0000010000000000000022 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
-		AB0000010000000000000023 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		AB0000010000000000000024 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
-		AB0000010000000000000025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB0000010000000000000026 /* CouplesDoThingsWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CouplesDoThingsWidget.entitlements; sourceTree = "<group>"; };
-		AB0000010000000000000027 /* CouplesDoThings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CouplesDoThings.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB0000010000000000000028 /* GoogleMaps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMaps.swift; sourceTree = "<group>"; };
-		AB0000010000000000000029 /* AddressMapPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressMapPreview.swift; sourceTree = "<group>"; };
-		DA3146AF304FFB02006A03F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0F1823C97D6C0FAE329570C7 /* CreateJoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateJoinView.swift; sourceTree = "<group>"; };
+		12FCD5C2F58A905AEB48ED6B /* GoogleMaps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMaps.swift; sourceTree = "<group>"; };
+		2969A0C05276077A9BCAAE54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E06C3B209800B3E0945DB69 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		3545906801B37064F45E2E8A /* AddressMapPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressMapPreview.swift; sourceTree = "<group>"; };
+		3A1499270453CD52B2EA1A19 /* CouplesDoThingsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouplesDoThingsApp.swift; sourceTree = "<group>"; };
+		405366AEF14C7B2D21E856F5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		41F4D6DB3FA03F4C3A1ED307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		53DF2F73E9D1FE8244C29149 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5CE7B4A57419A819968C4D93 /* CoupleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupleService.swift; sourceTree = "<group>"; };
+		706760EAC5C2DC2E7D8F0277 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		730921A41BA39DD644A70AE3 /* CouplesDoThingsWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CouplesDoThingsWidget.entitlements; sourceTree = "<group>"; };
+		7416A0535B7D76F3665C9D53 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		74A5F47E822EC358617CD069 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		74A882DA5F445585D58DAEAB /* ItemEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemEditorView.swift; sourceTree = "<group>"; };
+		7535B22703D8DB4BF2F1FDD9 /* WidgetDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetDataStore.swift; sourceTree = "<group>"; };
+		7B483DA4373EC8E7113E6829 /* CouplesDoThingsWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CouplesDoThingsWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8068512E08245AA51644862C /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		8B9C5C17C2B09EE371A247E4 /* CouplesDoThings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CouplesDoThings.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		93703381A3FE6F742B0D772D /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
+		967ABDD830FA8CB00024595C /* ItemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemService.swift; sourceTree = "<group>"; };
+		9D38ED4E8F6D502865893350 /* CouplesDoThings.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CouplesDoThings.entitlements; sourceTree = "<group>"; };
+		A8C92D67C2B05A7717734077 /* MemoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesView.swift; sourceTree = "<group>"; };
+		AA03A1B1A54776DBFB26E6AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AFA1D29DEE05D3928A06B411 /* CouplesDoThingsWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouplesDoThingsWidget.swift; sourceTree = "<group>"; };
+		B14EF343C20A70B362927DEC /* DeepLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLink.swift; sourceTree = "<group>"; };
+		C256D06B1C09CBBD8B1894E0 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
+		DA6B416230543A74005B4DD3 /* GoogleMapsLinkResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsLinkResolver.swift; sourceTree = "<group>"; };
+		E4DABC45126550A4E5D50F98 /* CouplesDoThingsWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouplesDoThingsWidgetBundle.swift; sourceTree = "<group>"; };
+		E66732F63136ED0D03C87C2A /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		E852A12471EF0666976C35F7 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		EA8F3427285DA417C282E5A4 /* WidgetSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSnapshot.swift; sourceTree = "<group>"; };
+		F420B98349C999B0C512A558 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FW0000010000000000000001 /* Frameworks */ = {
+		EDA41B5C7DBB826F409FC1AF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA0000010000000000000024 /* AuthenticationServices.framework in Frameworks */,
-				AA0000010000000000000018 /* FirebaseCore in Frameworks */,
-				AA0000010000000000000016 /* FirebaseAuth in Frameworks */,
-				AA0000010000000000000017 /* FirebaseFirestore in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FW0000010000000000000002 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AA0000010000000000000022 /* WidgetKit.framework in Frameworks */,
-				AA0000010000000000000023 /* SwiftUI.framework in Frameworks */,
+				8502AD03CC32F24EE2847FEE /* FirebaseAuth in Frameworks */,
+				57E8138E7ACC5ED9BE017B96 /* FirebaseFirestore in Frameworks */,
+				D3B163CE6B8395C670E31B16 /* FirebaseCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		GR0000010000000000000001 = {
+		087904A1689CA70D5668DF5F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				GR0000010000000000000002 /* CouplesDoThings */,
-				GR0000010000000000000003 /* CouplesDoThingsWidget */,
-				GR0000010000000000000004 /* Shared */,
-				GR0000010000000000000005 /* Frameworks */,
-				GR0000010000000000000006 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		GR0000010000000000000002 /* CouplesDoThings */ = {
-			isa = PBXGroup;
-			children = (
-				AB0000010000000000000001 /* CouplesDoThingsApp.swift */,
-				AB0000010000000000000002 /* Theme.swift */,
-				GR0000010000000000000007 /* Models */,
-				GR0000010000000000000008 /* Services */,
-				GR0000010000000000000009 /* Views */,
-				AB0000010000000000000014 /* Assets.xcassets */,
-				AB0000010000000000000016 /* Info.plist */,
-				DA3146AF304FFB02006A03F8 /* GoogleService-Info.plist */,
-				AB0000010000000000000017 /* CouplesDoThings.entitlements */,
-			);
-			path = CouplesDoThings;
-			sourceTree = "<group>";
-		};
-		GR0000010000000000000003 /* CouplesDoThingsWidget */ = {
-			isa = PBXGroup;
-			children = (
-				AB000001000000000000001A /* CouplesDoThingsWidget.swift */,
-				AB000001000000000000001B /* CouplesDoThingsWidgetBundle.swift */,
-				AB0000010000000000000021 /* Assets.xcassets */,
-				AB0000010000000000000025 /* Info.plist */,
-				AB0000010000000000000026 /* CouplesDoThingsWidget.entitlements */,
-			);
-			path = CouplesDoThingsWidget;
-			sourceTree = "<group>";
-		};
-		GR0000010000000000000004 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				AB0000010000000000000010 /* AppConstants.swift */,
-				AB0000010000000000000011 /* DeepLink.swift */,
-				AB0000010000000000000012 /* WidgetSnapshot.swift */,
-				AB0000010000000000000013 /* WidgetDataStore.swift */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		GR0000010000000000000005 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				AB0000010000000000000024 /* AuthenticationServices.framework */,
-				AB0000010000000000000022 /* WidgetKit.framework */,
-				AB0000010000000000000023 /* SwiftUI.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		GR0000010000000000000006 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				AB0000010000000000000027 /* CouplesDoThings.app */,
-				AB0000010000000000000020 /* CouplesDoThingsWidget.appex */,
+				8B9C5C17C2B09EE371A247E4 /* CouplesDoThings.app */,
+				7B483DA4373EC8E7113E6829 /* CouplesDoThingsWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		GR0000010000000000000007 /* Models */ = {
+		2008DB0FD349CFB5A5342477 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				AB0000010000000000000003 /* Models.swift */,
+				F420B98349C999B0C512A558 /* AppConstants.swift */,
+				B14EF343C20A70B362927DEC /* DeepLink.swift */,
+				7535B22703D8DB4BF2F1FDD9 /* WidgetDataStore.swift */,
+				EA8F3427285DA417C282E5A4 /* WidgetSnapshot.swift */,
 			);
-			path = Models;
+			path = Shared;
 			sourceTree = "<group>";
 		};
-		GR0000010000000000000008 /* Services */ = {
+		68A25F5497051265FADB68ED /* CouplesDoThingsWidget */ = {
 			isa = PBXGroup;
 			children = (
-				AB0000010000000000000004 /* AuthService.swift */,
-				AB0000010000000000000005 /* CoupleService.swift */,
-				AB0000010000000000000006 /* ItemService.swift */,
-				AB0000010000000000000007 /* SessionStore.swift */,
-				AB0000010000000000000028 /* GoogleMaps.swift */,
+				2969A0C05276077A9BCAAE54 /* Assets.xcassets */,
+				730921A41BA39DD644A70AE3 /* CouplesDoThingsWidget.entitlements */,
+				AFA1D29DEE05D3928A06B411 /* CouplesDoThingsWidget.swift */,
+				E4DABC45126550A4E5D50F98 /* CouplesDoThingsWidgetBundle.swift */,
+				41F4D6DB3FA03F4C3A1ED307 /* Info.plist */,
+			);
+			path = CouplesDoThingsWidget;
+			sourceTree = "<group>";
+		};
+		70D8FBF1C054F791CED3BF49 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3545906801B37064F45E2E8A /* AddressMapPreview.swift */,
+				0F1823C97D6C0FAE329570C7 /* CreateJoinView.swift */,
+				74A882DA5F445585D58DAEAB /* ItemEditorView.swift */,
+				93703381A3FE6F742B0D772D /* ItemListView.swift */,
+				706760EAC5C2DC2E7D8F0277 /* MainTabView.swift */,
+				A8C92D67C2B05A7717734077 /* MemoriesView.swift */,
+				7416A0535B7D76F3665C9D53 /* RootView.swift */,
+				74A5F47E822EC358617CD069 /* SettingsView.swift */,
+				8068512E08245AA51644862C /* SignInView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8683063FFE079BF2CF5D2ADA /* CouplesDoThings */ = {
+			isa = PBXGroup;
+			children = (
+				53DF2F73E9D1FE8244C29149 /* Assets.xcassets */,
+				9D38ED4E8F6D502865893350 /* CouplesDoThings.entitlements */,
+				3A1499270453CD52B2EA1A19 /* CouplesDoThingsApp.swift */,
+				405366AEF14C7B2D21E856F5 /* GoogleService-Info.plist */,
+				AA03A1B1A54776DBFB26E6AA /* Info.plist */,
+				E66732F63136ED0D03C87C2A /* Theme.swift */,
+				FA9D5FB8856F7C1209EACE19 /* Models */,
+				D6D8E7B5C4B88CAB5E79CA1C /* Services */,
+				70D8FBF1C054F791CED3BF49 /* Views */,
+			);
+			path = CouplesDoThings;
+			sourceTree = "<group>";
+		};
+		D6D8E7B5C4B88CAB5E79CA1C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DA6B416230543A74005B4DD3 /* GoogleMapsLinkResolver.swift */,
+				2E06C3B209800B3E0945DB69 /* AuthService.swift */,
+				5CE7B4A57419A819968C4D93 /* CoupleService.swift */,
+				12FCD5C2F58A905AEB48ED6B /* GoogleMaps.swift */,
+				967ABDD830FA8CB00024595C /* ItemService.swift */,
+				C256D06B1C09CBBD8B1894E0 /* SessionStore.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		GR0000010000000000000009 /* Views */ = {
+		EDC9A13641912A21E6F1B8D5 = {
 			isa = PBXGroup;
 			children = (
-				AB0000010000000000000008 /* RootView.swift */,
-				AB0000010000000000000009 /* SignInView.swift */,
-				AB000001000000000000000A /* CreateJoinView.swift */,
-				AB000001000000000000000B /* MainTabView.swift */,
-				AB000001000000000000000C /* ItemListView.swift */,
-				AB000001000000000000000D /* ItemEditorView.swift */,
-				AB0000010000000000000029 /* AddressMapPreview.swift */,
-				AB000001000000000000000E /* MemoriesView.swift */,
-				AB000001000000000000000F /* SettingsView.swift */,
+				8683063FFE079BF2CF5D2ADA /* CouplesDoThings */,
+				68A25F5497051265FADB68ED /* CouplesDoThingsWidget */,
+				2008DB0FD349CFB5A5342477 /* Shared */,
+				087904A1689CA70D5668DF5F /* Products */,
 			);
-			path = Views;
+			sourceTree = "<group>";
+		};
+		FA9D5FB8856F7C1209EACE19 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E852A12471EF0666976C35F7 /* Models.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		TG0000010000000000000001 /* CouplesDoThings */ = {
+		23567E6374E434162F55EAC8 /* CouplesDoThingsWidget */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CL0000010000000000000001 /* Build configuration list for PBXNativeTarget "CouplesDoThings" */;
+			buildConfigurationList = 004AB5D09C3232D6107A5B86 /* Build configuration list for PBXNativeTarget "CouplesDoThingsWidget" */;
 			buildPhases = (
-				SO0000010000000000000001 /* Sources */,
-				FW0000010000000000000001 /* Frameworks */,
-				RS0000010000000000000001 /* Resources */,
-				CP0000010000000000000001 /* Embed Foundation Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				TD0000010000000000000001 /* PBXTargetDependency */,
-			);
-			name = CouplesDoThings;
-			packageProductDependencies = (
-				PK0000010000000000000001 /* FirebaseAuth */,
-				PK0000010000000000000002 /* FirebaseFirestore */,
-				PK0000010000000000000003 /* FirebaseCore */,
-			);
-			productName = CouplesDoThings;
-			productReference = AB0000010000000000000027 /* CouplesDoThings.app */;
-			productType = "com.apple.product-type.application";
-		};
-		TG0000010000000000000002 /* CouplesDoThingsWidget */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CL0000010000000000000002 /* Build configuration list for PBXNativeTarget "CouplesDoThingsWidget" */;
-			buildPhases = (
-				SO0000010000000000000002 /* Sources */,
-				FW0000010000000000000002 /* Frameworks */,
-				RS0000010000000000000002 /* Resources */,
+				5B1AE4AB6DC85A08742EC9E5 /* Sources */,
+				EB4D453D230D11C42E14B9A2 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = CouplesDoThingsWidget;
+			packageProductDependencies = (
+			);
 			productName = CouplesDoThingsWidget;
-			productReference = AB0000010000000000000020 /* CouplesDoThingsWidget.appex */;
+			productReference = 7B483DA4373EC8E7113E6829 /* CouplesDoThingsWidget.appex */;
 			productType = "com.apple.product-type.app-extension";
+		};
+		FAA338240E9F75ED683554F4 /* CouplesDoThings */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EEA94680A94FDB29668B895 /* Build configuration list for PBXNativeTarget "CouplesDoThings" */;
+			buildPhases = (
+				9C3607B15FBC68711B17BD52 /* Sources */,
+				4618165BC1BA7E4FFC10E16D /* Resources */,
+				EDA41B5C7DBB826F409FC1AF /* Frameworks */,
+				F5DEF1D604FB4256F2F80659 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7CE9F766E9D142CF5C29374 /* PBXTargetDependency */,
+			);
+			name = CouplesDoThings;
+			packageProductDependencies = (
+				EF70DCADC17C03C85100648F /* FirebaseAuth */,
+				B872CF4D0F3D80148961D489 /* FirebaseFirestore */,
+				2A8EA61AB0E628F943866857 /* FirebaseCore */,
+			);
+			productName = CouplesDoThings;
+			productReference = 8B9C5C17C2B09EE371A247E4 /* CouplesDoThings.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		PR0000010000000000000001 /* Project object */ = {
+		430C1BD28E4BE33C0B3B2B87 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					TG0000010000000000000001 = {
-						CreatedOnToolsVersion = 15.0;
+					23567E6374E434162F55EAC8 = {
+						ProvisioningStyle = Automatic;
 					};
-					TG0000010000000000000002 = {
-						CreatedOnToolsVersion = 15.0;
+					FAA338240E9F75ED683554F4 = {
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = CL0000010000000000000003 /* Build configuration list for PBXProject "CouplesDoThings" */;
-			compatibilityVersion = "Xcode 14.0";
+			buildConfigurationList = 1382CFA201FCE5605BB21B2E /* Build configuration list for PBXProject "CouplesDoThings" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
-			mainGroup = GR0000010000000000000001;
+			mainGroup = EDC9A13641912A21E6F1B8D5;
+			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				PP0000010000000000000001 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				73CBC7D74248E40F63393F79 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
-			productRefGroup = GR0000010000000000000006 /* Products */;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 087904A1689CA70D5668DF5F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				TG0000010000000000000001 /* CouplesDoThings */,
-				TG0000010000000000000002 /* CouplesDoThingsWidget */,
+				FAA338240E9F75ED683554F4 /* CouplesDoThings */,
+				23567E6374E434162F55EAC8 /* CouplesDoThingsWidget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		RS0000010000000000000001 /* Resources */ = {
+		4618165BC1BA7E4FFC10E16D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA0000010000000000000014 /* Assets.xcassets in Resources */,
-				DA3146B0304FFB02006A03F8 /* GoogleService-Info.plist in Resources */,
+				348EB59D433B87FE68281E56 /* Assets.xcassets in Resources */,
+				64903416FAD1EF51A526E008 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		RS0000010000000000000002 /* Resources */ = {
+		EB4D453D230D11C42E14B9A2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA0000010000000000000021 /* Assets.xcassets in Resources */,
+				66AB8F730072935E142F294D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		SO0000010000000000000001 /* Sources */ = {
+		5B1AE4AB6DC85A08742EC9E5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA0000010000000000000001 /* CouplesDoThingsApp.swift in Sources */,
-				AA0000010000000000000002 /* Theme.swift in Sources */,
-				AA0000010000000000000003 /* Models.swift in Sources */,
-				AA0000010000000000000004 /* AuthService.swift in Sources */,
-				AA0000010000000000000005 /* CoupleService.swift in Sources */,
-				AA0000010000000000000006 /* ItemService.swift in Sources */,
-				AA0000010000000000000007 /* SessionStore.swift in Sources */,
-				AA0000010000000000000008 /* RootView.swift in Sources */,
-				AA0000010000000000000009 /* SignInView.swift in Sources */,
-				AA000001000000000000000A /* CreateJoinView.swift in Sources */,
-				AA000001000000000000000B /* MainTabView.swift in Sources */,
-				AA000001000000000000000C /* ItemListView.swift in Sources */,
-				AA000001000000000000000D /* ItemEditorView.swift in Sources */,
-				AA000001000000000000000E /* MemoriesView.swift in Sources */,
-				AA000001000000000000000F /* SettingsView.swift in Sources */,
-				AA0000010000000000000010 /* AppConstants.swift in Sources */,
-				AA0000010000000000000011 /* DeepLink.swift in Sources */,
-				AA0000010000000000000012 /* WidgetSnapshot.swift in Sources */,
-				AA0000010000000000000013 /* WidgetDataStore.swift in Sources */,
-				AA0000010000000000000028 /* GoogleMaps.swift in Sources */,
-				AA0000010000000000000029 /* AddressMapPreview.swift in Sources */,
+				3779BBA93893EEFBE4DDE542 /* AppConstants.swift in Sources */,
+				5EE5E8288B8C7C90683CD108 /* CouplesDoThingsWidget.swift in Sources */,
+				8E54BEA982537A9AB74177EC /* CouplesDoThingsWidgetBundle.swift in Sources */,
+				DAD27924F3CE89EB805C1FF7 /* DeepLink.swift in Sources */,
+				FB805E4BE443D70CDD3DF2B1 /* WidgetDataStore.swift in Sources */,
+				725AE221E5F428700F55503B /* WidgetSnapshot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		SO0000010000000000000002 /* Sources */ = {
+		9C3607B15FBC68711B17BD52 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA000001000000000000001A /* CouplesDoThingsWidget.swift in Sources */,
-				AA000001000000000000001B /* CouplesDoThingsWidgetBundle.swift in Sources */,
-				AA000001000000000000001C /* AppConstants.swift in Sources */,
-				AA000001000000000000001D /* DeepLink.swift in Sources */,
-				AA000001000000000000001E /* WidgetSnapshot.swift in Sources */,
-				AA000001000000000000001F /* WidgetDataStore.swift in Sources */,
+				D5FB1D894DAC23B516EDD16E /* AddressMapPreview.swift in Sources */,
+				C885F2E276409213DCE715A1 /* AppConstants.swift in Sources */,
+				7183EFAE6A18AA7A8C66C92A /* AuthService.swift in Sources */,
+				E284752334503D9B114DCF00 /* CoupleService.swift in Sources */,
+				2D143A4DA357032E1BE17F38 /* CouplesDoThingsApp.swift in Sources */,
+				0517D6089297A4D038C92FA1 /* CreateJoinView.swift in Sources */,
+				DAE7CACDBA7AFE03B68826A1 /* DeepLink.swift in Sources */,
+				DA6B416330543A74005B4DD3 /* GoogleMapsLinkResolver.swift in Sources */,
+				AA676A918143C9AB8E27377C /* GoogleMaps.swift in Sources */,
+				1C9331484D30FAF309F6321D /* ItemEditorView.swift in Sources */,
+				3C3C6F2B6141CF26B46F0169 /* ItemListView.swift in Sources */,
+				2F0B9E5AB9BA8F8D19BFBD02 /* ItemService.swift in Sources */,
+				6CBDCD925CC96123A59D476C /* MainTabView.swift in Sources */,
+				9BE5B64F82EDC6EE76E7D64C /* MemoriesView.swift in Sources */,
+				A257440F5D1401C8569679E5 /* Models.swift in Sources */,
+				70A91EEC025BCB37C2E3F3D3 /* RootView.swift in Sources */,
+				C433AC5105355FA1C35B814E /* SessionStore.swift in Sources */,
+				8C525BD65567A8853EC25DE6 /* SettingsView.swift in Sources */,
+				850D93702EB7086939A65FE8 /* SignInView.swift in Sources */,
+				143AF3CABC19844A0B4BF07F /* Theme.swift in Sources */,
+				8DA417129BE92F310BE8ADFD /* WidgetDataStore.swift in Sources */,
+				BCE464DD4443B7F3404C1149 /* WidgetSnapshot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		TD0000010000000000000001 /* PBXTargetDependency */ = {
+		B7CE9F766E9D142CF5C29374 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = TG0000010000000000000002 /* CouplesDoThingsWidget */;
-			targetProxy = PX0000010000000000000001 /* PBXContainerItemProxy */;
+			target = 23567E6374E434162F55EAC8 /* CouplesDoThingsWidget */;
+			targetProxy = 8EA51788A2DBC0CE63A56D57 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		CF0000010000000000000001 /* Debug */ = {
+		317A6384894BAD9291091DAA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		52A30385353D7C75E5C66A96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -416,101 +491,67 @@
 			};
 			name = Debug;
 		};
-		CF0000010000000000000002 /* Release */ = {
+		64DD18EDC44EC142E3E76A59 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				CODE_SIGN_ENTITLEMENTS = CouplesDoThingsWidget/CouplesDoThingsWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q8CNXLJQAQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CouplesDoThingsWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Couples Do Things";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.couplesdothings.app.widget;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_VERSION = 5.0;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		CF0000010000000000000003 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = CouplesDoThings/CouplesDoThings.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q8CNXLJQAQ;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CouplesDoThings/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Couples Do Things";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.couplesdothings.app;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		CF0000010000000000000004 /* Release */ = {
+		9B1DEC245B1EA4CED83B23CA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CouplesDoThings/CouplesDoThings.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q8CNXLJQAQ;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CouplesDoThings/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Couples Do Things";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.couplesdothings.app;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SDKROOT = iphoneos;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
-		CF0000010000000000000005 /* Debug */ = {
+		B7A2E0D8E67E4C9734ED537D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = CouplesDoThingsWidget/CouplesDoThingsWidget.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q8CNXLJQAQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CouplesDoThingsWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Couples Do Things";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -518,71 +559,66 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.couplesdothings.app.widget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
-			name = Debug;
+			name = Release;
 		};
-		CF0000010000000000000006 /* Release */ = {
+		D2161C6FF42DCC70670D71AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = CouplesDoThingsWidget/CouplesDoThingsWidget.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CouplesDoThings/CouplesDoThings.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q8CNXLJQAQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CouplesDoThingsWidget/Info.plist;
+				INFOPLIST_FILE = CouplesDoThings/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Couples Do Things";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.couplesdothings.app.widget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.couplesdothings.app;
+				SDKROOT = iphoneos;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CL0000010000000000000001 /* Build configuration list for PBXNativeTarget "CouplesDoThings" */ = {
+		004AB5D09C3232D6107A5B86 /* Build configuration list for PBXNativeTarget "CouplesDoThingsWidget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CF0000010000000000000003 /* Debug */,
-				CF0000010000000000000004 /* Release */,
+				64DD18EDC44EC142E3E76A59 /* Debug */,
+				B7A2E0D8E67E4C9734ED537D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CL0000010000000000000002 /* Build configuration list for PBXNativeTarget "CouplesDoThingsWidget" */ = {
+		1382CFA201FCE5605BB21B2E /* Build configuration list for PBXProject "CouplesDoThings" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CF0000010000000000000005 /* Debug */,
-				CF0000010000000000000006 /* Release */,
+				52A30385353D7C75E5C66A96 /* Debug */,
+				317A6384894BAD9291091DAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CL0000010000000000000003 /* Build configuration list for PBXProject "CouplesDoThings" */ = {
+		9EEA94680A94FDB29668B895 /* Build configuration list for PBXNativeTarget "CouplesDoThings" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CF0000010000000000000001 /* Debug */,
-				CF0000010000000000000002 /* Release */,
+				D2161C6FF42DCC70670D71AE /* Debug */,
+				9B1DEC245B1EA4CED83B23CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -590,7 +626,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		PP0000010000000000000001 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		73CBC7D74248E40F63393F79 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
@@ -601,22 +637,22 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		PK0000010000000000000001 /* FirebaseAuth */ = {
+		2A8EA61AB0E628F943866857 /* FirebaseCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = PP0000010000000000000001 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
+			package = 73CBC7D74248E40F63393F79 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
 		};
-		PK0000010000000000000002 /* FirebaseFirestore */ = {
+		B872CF4D0F3D80148961D489 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = PP0000010000000000000001 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 73CBC7D74248E40F63393F79 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
 		};
-		PK0000010000000000000003 /* FirebaseCore */ = {
+		EF70DCADC17C03C85100648F /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = PP0000010000000000000001 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseCore;
+			package = 73CBC7D74248E40F63393F79 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = PR0000010000000000000001 /* Project object */;
+	rootObject = 430C1BD28E4BE33C0B3B2B87 /* Project object */;
 }

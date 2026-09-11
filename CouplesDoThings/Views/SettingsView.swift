@@ -106,13 +106,6 @@ struct SettingsView: View {
 
     private func savePhoto(_ item: PhotosPickerItem?) async {
         guard let item else { return }
-        var data: Data?
-        if let picked = try? await item.loadTransferable(type: PickedImageData.self) {
-            data = picked.data
-        }
-        if data == nil {
-            data = try? await item.loadTransferable(type: Data.self)
-        }
 
         var data: Data?
         if let picked = try? await item.loadTransferable(type: PickedImageData.self) {

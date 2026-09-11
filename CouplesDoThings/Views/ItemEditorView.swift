@@ -13,6 +13,7 @@ struct ItemEditorView: View {
     @State private var useRange = false
     @State private var dateStart = Date()
     @State private var dateEnd = Date()
+    @State private var isResolvingAddress = false
 
     var body: some View {
         NavigationStack {
@@ -21,7 +22,12 @@ struct ItemEditorView: View {
                     TextField("Title", text: $title)
                 }
                 Section("Optional details") {
-                    TextField("Address", text: $address)
+                    HStack {
+                        TextField("Address", text: $address)
+                        if isResolvingAddress {
+                            ProgressView()
+                        }
+                    }
                     TextField("Price", text: $priceText)
                     Toggle("Add dates", isOn: $includeDates)
                     if includeDates {
@@ -36,7 +42,9 @@ struct ItemEditorView: View {
                     Section("Map") {
                         AddressMapPreview(address: address)
                         Button("Open in Google Maps") {
-                            GoogleMaps.open(address: address)
+                            Task {
+                                self.address = await GoogleMaps.openResolvingAddress(address)
+                            }
                         }
                     }
                 }
@@ -53,12 +61,37 @@ struct ItemEditorView: View {
                 }
             }
             .onAppear { hydrate() }
+            .task(id: address) {
+                await autoResolveIfNeeded()
+            }
         }
     }
 
     private var sanitizedAddress: String? {
         let value = address.trimmingCharacters(in: .whitespacesAndNewlines)
         return value.isEmpty ? nil : value
+    }
+
+    /// If the address field currently holds a Google Maps URL, silently
+    /// resolve it to a plain address as soon as pasting settles.
+    private func autoResolveIfNeeded() async {
+        let trimmed = address.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard let url = URL(string: trimmed), let scheme = url.scheme, scheme.hasPrefix("http") else {
+            return
+        }
+
+        try? await Task.sleep(nanoseconds: 300_000_000)
+        guard !Task.isCancelled else { return }
+        guard address.trimmingCharacters(in: .whitespacesAndNewlines) == trimmed else { return }
+
+        isResolvingAddress = true
+        let resolved = await GoogleMapsLinkResolver.resolvedAddress(from: trimmed)
+        isResolvingAddress = false
+
+        guard !Task.isCancelled else { return }
+        if address.trimmingCharacters(in: .whitespacesAndNewlines) == trimmed, let resolved {
+            address = resolved
+        }
     }
 
     private func hydrate() {

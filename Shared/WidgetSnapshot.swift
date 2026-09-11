@@ -29,6 +29,35 @@ struct WidgetSnapshot: Codable, Hashable {
     var items: [WidgetItemSnapshot]
     var updatedAt: Date
 
+    var firstNamesCoupleName: String {
+        Self.firstNamesOnly(from: coupleName)
+    }
+
+    static func coupleName(partnerName: String?) -> String {
+        guard let partnerFirstName = firstName(from: partnerName) else {
+            return "Couples Do Things"
+        }
+
+        return "You & \(partnerFirstName)"
+    }
+
+    private static func firstNamesOnly(from coupleName: String) -> String {
+        let names = coupleName
+            .split(separator: "&", omittingEmptySubsequences: true)
+            .compactMap { firstName(from: String($0)) }
+
+        return names.isEmpty ? coupleName : names.joined(separator: " & ")
+    }
+
+    private static func firstName(from name: String?) -> String? {
+        guard let name else { return nil }
+        return name
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+            .split(whereSeparator: { $0.isWhitespace })
+            .first
+            .map(String.init)
+    }
+
     var activeItems: [WidgetItemSnapshot] {
         items.filter { !$0.isCompleted }
     }

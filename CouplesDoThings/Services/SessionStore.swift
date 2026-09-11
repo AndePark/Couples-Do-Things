@@ -143,7 +143,9 @@ final class SessionStore: ObservableObject {
 
     func setPhotoSharing(enabled: Bool) async {
         guard let uid, let couple else { return }
+
         let personalData = WidgetDataStore.loadPersonalBackgroundImageData()
+
         do {
             try await coupleService.setPhotoSharing(
                 uid: uid,
@@ -151,7 +153,16 @@ final class SessionStore: ObservableObject {
                 enabled: enabled,
                 photoData: enabled ? personalData : nil
             )
+
             errorMessage = nil
+
+            // Immediately update the widget.
+            // If both partners are sharing, the Firestore listener
+            // will replace this with the shared photo.
+            WidgetDataStore.saveBackgroundImageData(personalData)
+
+            refreshWidget()
+
         } catch {
             errorMessage = error.localizedDescription
         }
@@ -218,7 +229,7 @@ final class SessionStore: ObservableObject {
 
     private func refreshWidget() {
         let snapshot = WidgetSnapshot(
-            coupleName: partnerName.map { "You & \($0)" } ?? "Couples Do Things",
+            coupleName: WidgetSnapshot.coupleName(partnerName: partnerName),
             items: items.map { $0.snapshot() },
             updatedAt: .now
         )

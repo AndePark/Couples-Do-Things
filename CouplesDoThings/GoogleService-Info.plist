@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyC0oi14rUBb7iNrCDc4fvp3qQULOCn_H0s</string>
+	<string>AIzaSyAWDb1t5zSC98PvjU3aLONLtHJ7omCS_40</string>
 	<key>GCM_SENDER_ID</key>
-	<string>790538433645</string>
+	<string>88549970070</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.couplesdothings.app</string>
 	<key>PROJECT_ID</key>
-	<string>couplethings-afd18</string>
+	<string>cdtv4-d9ab9</string>
 	<key>STORAGE_BUCKET</key>
-	<string>couplethings-afd18.firebasestorage.app</string>
+	<string>cdtv4-d9ab9.firebasestorage.app</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:790538433645:ios:b9d1035d6d01c2a918fb64</string>
+	<string>1:88549970070:ios:6360f0de31c60a7254b2b7</string>
 </dict>
 </plist>
