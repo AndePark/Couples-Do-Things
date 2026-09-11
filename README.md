@@ -9,6 +9,9 @@ A native iOS app (iOS 16+) where you and your partner share one list of things t
 - Add / edit items (title required; address, price, and a date or date range optional)
 - Mark done → **Memories**, or delete without completing
 - Home-screen widgets (small / medium / large) if your Mac/Xcode will sign them; the in-app list works either way
+- Widget title shows **YOU & your partner’s first name** only
+- Widget sections are centered and visually emphasized above the list items
+- Widget list items show upcoming and recently added ideas, with item titles more prominent than dates
 - Widget background photo is **per device**
 
 ## Install on your two iPhones (free)
@@ -38,23 +41,3 @@ Use the Spark (no-cost) plan.
 
 ```bash
 firebase deploy --only firestore:rules
-```
-
-The placeholder plist will not talk to a real project until you replace it.
-
-## How the two of you use it
-
-1. Each of you creates an account in the app (name, email, password).
-2. One person taps **Create couple space** and copies the invite code.
-3. The other joins with that code.
-4. Add movies, dinners, trips — extra fields are optional.
-
-## Layout
-
-- `CouplesDoThings/` — SwiftUI app
-- `CouplesDoThingsWidget/` — WidgetKit extension
-- `Shared/` — App Group snapshot, deep links
-- `firestore.rules` — member-only couple data
-- `project.yml` — XcodeGen spec
-
-This Windows folder cannot compile iOS. Use Xcode on a Mac.
