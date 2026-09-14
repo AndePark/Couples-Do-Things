@@ -1,6 +1,6 @@
-# Couples Do Things
+# Someday, Us
 
-A native iOS app (iOS 16+) where you and your partner share one list of things to do together. Optional address, price, and dates. Built to run **for free** on two iPhones with Xcode — no Apple Developer Program ($99) and no App Store.
+A native iOS app (iOS 16+) where you and your partner share one list of things to do together.
 
 ## What you get
 
